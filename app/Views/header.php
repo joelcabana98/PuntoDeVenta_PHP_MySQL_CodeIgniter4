@@ -7,9 +7,9 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Sistema de Ventas</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-        <script src="js/all.min.js"></script>
+        <link href="<?php echo base_url();?>/css/styles.css" rel="stylesheet" />
+        <link href="<?php echo base_url();?>/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <script src="<?php echo base_url();?>/js/all.min.js"></script>
     </head>
 
     <body class="sb-nav-fixed">
@@ -43,8 +43,8 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Productos</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Unidades</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Categorias</a>
+                                    <a class="nav-link" href="<?php echo base_url();?>/unidades">Unidades</a>
+                                    <a class="nav-link" href="<?php echo base_url();?>/categorias">Categorias</a>
                                 </nav>
                             </div>
                             
