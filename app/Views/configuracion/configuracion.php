@@ -8,8 +8,7 @@
                         <?php echo $validation->listErrors(); ?>
                         </div>
                     <?php } ?>
-                       
-                        
+                    
                            <form method="POST" action="<?php echo base_url();?>/configuracion/actualizar" autocomplete="off">
                                 <?php csrf_field();?>
                                 <div class="form-group">
@@ -43,7 +42,7 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                         <label>Direccion de Tienda</label>
-                                        <textarea  class="form-control" id="tienda_direccion" name="tienda_direccion" required>  <?php echo $direccion['valor'] ?></textarea>
+                                        <textarea  class="form-control" id="tienda_direccion" name="tienda_direccion" required><?php echo $direccion['valor'] ?></textarea>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                         <label>Leyenda de Ticket</label>

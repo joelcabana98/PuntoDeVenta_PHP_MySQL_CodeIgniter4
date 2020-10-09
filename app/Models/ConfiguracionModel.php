@@ -18,12 +18,9 @@ class ConfiguracionModel extends Model{
     protected $useSoftCreates = false;
 
     //ingresar nombre de las columnas
-    protected $allowedFields = ['nombre', 'nvalor'];
+    protected $allowedFields = ['nombre', 'valor'];
 
     protected $useTimestamps = true;
-    protected $createdField  = null;
-    protected $updatedField  = null;
-    protected $deletedField  = 'deleted_at';
 
     //validaciones
     protected $validationRules    = [];

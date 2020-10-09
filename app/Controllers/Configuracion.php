@@ -43,17 +43,27 @@ class Configuracion extends BaseController{
     }
 
 
-public function actualizar(){
-    
-    if($this->request->getMethod() == "post" && $this->validate($this->reglas)){ 
+    public function actualizar(){
 
-      $this->configuracion->whereIn('nombre',['tienda_nombre'])->set(['valor' => $this->request->getPost('tienda_nombre')])->update();
-    
-      return redirect()->to(base_url(), '/configuracion');
-    }else {
-        //return $this->editar($this->request->getPost('id'), $this->validator);
+        if($this->request->getMethod() == "post" && $this->validate($this->reglas)){
+
+            $this->configuracion->whereIn('nombre',['tienda_nombre'])->set(['valor' => $this->request->getPost('tienda_nombre')])->update();
+            $this->configuracion->whereIn('nombre',['tienda_rfc'])->set(['valor' => $this->request->getPost('tienda_rfc')])->update();
+            $this->configuracion->whereIn('nombre',['tienda_telefono'])->set(['valor' => $this->request->getPost('tienda_telefono')])->update();
+            $this->configuracion->whereIn('nombre',['tienda_email'])->set(['valor' => $this->request->getPost('tienda_email')])->update();
+            $this->configuracion->whereIn('nombre',['tienda_direccion'])->set(['valor' => $this->request->getPost('tienda_direccion')])->update();
+            $this->configuracion->whereIn('nombre',['ticket_leyenda'])->set(['valor' => $this->request->getPost('ticket_leyenda')])->update();
+
+            return redirect()->to(base_url().'/configuracion');
+        }else{
+
+
+        }
+        
+        
+        
+
     }
-}
 
 
 }
